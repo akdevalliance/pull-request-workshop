@@ -14,4 +14,8 @@ class RogueMath
   def self.divide(a, b)
     b / a
   end
+
+  def square(a)
+    a**2
+  end
 end
