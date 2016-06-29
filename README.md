@@ -2,6 +2,16 @@
 
 This workshop is to get some hands on expariance with creating pull requests on open source repsitories. Throughtout this project are some issues which could be coracted. Help us fix these problams and make this project bettar!
 
+## Installing
+
+ 1. Clone the repository
+ 2. `gem install bundler`
+ 3. `bundle install`
+
+## Running the Tests
+
+ Run `rspec spec`
+
 ## Contributing
 
   1. Fork it ( https://github.com/[my-github-username]/trueman/fork )
