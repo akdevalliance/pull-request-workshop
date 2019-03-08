@@ -1,29 +1,13 @@
+require:
+  - rubocop-rspec
+
 # Common configuration.
 AllCops:
-  # Include common Ruby source files.
-  Include:
-    - '**/*.gemspec'
-    - '**/*.podspec'
-    - '**/*.jbuilder'
-    - '**/*.rake'
-    - '**/*.opal'
-    - '**/config.ru'
-    - '**/Gemfile'
-    - '**/Rakefile'
-    - '**/Capfile'
-    - '**/Podfile'
-    - '**/Thorfile'
-    - '**/Vagrantfile'
-    - '**/Berksfile'
-    - '**/Cheffile'
-    - '**/Vagabondfile'
   Exclude:
-    - 'vendor/**/*'
-    - 'config/**/*'
-    - 'db/**/*'
-    - 'Gemfile*'
-    - 'bin/**/*'
-    - 'Guardfile*'
+    - "vendor/**/*"
+    - "bin/**/*"
+    - "Guardfile*"
+    - db/schema.rb
 
   # Cop names are not displayed in offense messages by default. Change behavior
   # by overriding DisplayCopNames, or by giving the -D/--display-cop-names
@@ -54,16 +38,41 @@ AllCops:
   # "/tmp" is special and will be converted to the system temporary directory,
   # which is "/tmp" on Unix-like systems, but could be something else on other
   # systems.
-  CacheRootDirectory: /tmp
+  CacheRootDirectory: ./tmp
+
+Metrics/BlockLength:
+  ExcludedMethods: ["describe", "context"]
 
 Metrics/LineLength:
   Max: 80
 
+Naming/UncommunicativeMethodParamName:
+  Enabled: false
+
+# By default, the rails cops are not run. Override in project or home
+# directory .rubocop.yml files, or by giving the -R/--rails option.
+Rails:
+  Enabled: true
+
+# Custom overrides
 Style/Documentation:
   Enabled: false
 
 Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# RSpec
+RSpec/DescribeClass:
   Enabled: false
 
-Style/BlockComments:
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
   Enabled: false
