@@ -5,7 +5,7 @@ This workshop is to get some hands on expariance with creating pull requests on 
 ## Installing
 
 1.  Clone the repository
-2.  `gem install bundler`
+2.  `gem install bundler -v 1.15.3`
 3.  `bundle install`
 
 ## Running the Tests
