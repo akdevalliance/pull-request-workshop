@@ -1,6 +1,6 @@
 class RogueMath
   def self.add(a, b)
-    a + a
+    a + b
   end
 
   def self.subtract(a, b)

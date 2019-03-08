@@ -3,9 +3,9 @@ require_relative "../rogue_math.rb"
 describe RogueMath do
   describe "add" do
     let(:a) { 2 }
-    let(:b) { 2 }
+    let(:b) { 3 }
 
-    specify { expect(described_class.add(a, b)).to eq 4 }
+    specify { expect(described_class.add(a, b)).to eq 5 }
   end
 
   describe "subtract" do
